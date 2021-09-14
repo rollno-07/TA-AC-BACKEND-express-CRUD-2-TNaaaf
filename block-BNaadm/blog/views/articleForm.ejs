@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Article</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header><h1>Add Article</h1></header>
+    <main>
+        <div class="main">
+        
+            <form class="container" method="POST" action="/blog">
+                <header><h1>Article Details</h1></header>
+                <div class="form-control">
+                    <label for="text">Title</label> 
+                    <input id="text" type="text" name="title" placeholder="Enter Title" required/>
+                    
+                </div>
+                
+            <div class="form-control">
+                <label for="text">Descripton</label>
+               <textarea name="description" id="text" cols="30" rows="10" placeholder="description"></textarea>
+            </div>
+            <div class="form-control">
+                <label for="text">Tag</label>
+                <input id="text" type="text" name="tags" placeholder="Enter tags" required/>
+            </div>
+            
+            <div class="form-control">
+                <label for="text">Author</label>
+                <input id="text" type="text" name="author" placeholder="Enter author" required/>
+            </div>
+            
+            
+            
+            
+            <div class="form-control"><button type="submit">Add Article</button></div>
+            
+            
+            <div class="form-control"><a href="/blog">Back</a></div>
+          </form>
+        
+        </div>
+    </main>
+    <footer><small>&copy V-Blog All Rights reserved</small></footer>
+</body>
+</html>
