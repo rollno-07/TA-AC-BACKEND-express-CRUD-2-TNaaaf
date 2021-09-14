@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+        <h1>Articles</h1>
+        <a href="/blog/new">Add Article</a>
+    </header>
+    <main>
+    <div class="main">
+        
+        <div class="container" >
+            <header><h1><%=article.title%></h1></header>
+            <div class="form-control">
+                <h3>Description:-<%=article.description%></h3>
+                <h3>Tags:-<%=article.tags%></h3>
+                <h3>Author:-<%=article.author%></h3>
+                <h3>like:-<%=article.likes%></h3>
+                <a href="/blog">Back</a>
+                
+                <a href="/blog/<%= article.id %>/edit"><button>Edit</button></a>
+            <a href="/blog/<%= article.id %>/delete"><button>Delete</button></a>
+            
+        <hr>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+    <form class="container" method="POST" action="/blog/<%= article.id %>/comments">
+        <div class="form-control">
+            <label for="comment">Comments</label>
+            <textarea name="content" id="" cols="50" rows="5" placeholder="comments"></textarea>
+            <button type="submit">Comment</button>
+            </div>
+            
+        </form>
+        <% comments.forEach(comment=>{%>
+            <p><%=comment.content%></p>
+      <%  })%>
+        
+    </main>
+    <footer><small>&copy V-Blog All Rights reserved</small></footer>
+</body>
+</html>
